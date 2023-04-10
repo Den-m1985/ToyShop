@@ -1,0 +1,2 @@
+id: 3  name: Игрушка 86  item: 21  weight: 42
+id: 5  name: Игрушка 13  item: 32  weight: 23
