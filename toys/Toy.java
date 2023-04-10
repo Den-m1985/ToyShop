@@ -1,29 +1,25 @@
 package toys;
 
-public class Toy {
+import java.util.concurrent.atomic.AtomicInteger;
 
-    protected int id;
-    protected String name;
-    protected int item;
-    protected int weight;
+public class Toy {
+    private static final AtomicInteger count = new AtomicInteger(0);
+    private final int id;
+    private String name;
+    private int item;
+    private int weight;
 
     public Toy(String name, int item, int weight) {
+        this.id = count.incrementAndGet();
         this.name = name;
         this.item = item;
         this.weight = weight;
 
     }
 
-    public void setWeight(int weight) {
-        this.weight = weight;
-    }
 
     public int getId() {
         return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public String getName() {
@@ -46,8 +42,14 @@ public class Toy {
         return weight;
     }
 
+    public void setWeight(int weight) {
+        this.weight = weight;
+    }
+
+
     @Override
     public String toString() {
-        return "\nid: " + id + "  name: " + name + "  item: " + item + "  weight: " + weight;
+        return "id: " + id + "  name: " + name + "  item: " + item + "  weight: " + weight;
     }
+
 }
