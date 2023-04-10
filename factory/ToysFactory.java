@@ -8,7 +8,7 @@ import java.util.Random;
 public class ToysFactory {
 
     /**
-     * Create snakes.
+     * Create toys
      */
     public static ArrayList<Toy> createToys(int toyCount) {
         Random random = new Random();
@@ -18,10 +18,9 @@ public class ToysFactory {
 
             int rand1 = random.nextInt(1, 100);  // имя
             String name = "Игрушка " + rand1;
-            int rand2 = random.nextInt(1, 50);   // кол-во ????
+            int rand2 = random.nextInt(1, 50);   // кол-во
             int rand3 = random.nextInt(1, 99);   // вес
             Toy toy = new Toy(name, rand2, rand3);
-            toy.setId(i+1);
 
             createToys.add(toy);
         }
