@@ -27,6 +27,9 @@ public class ToysToArray<Toy> {
         }
     }
 
+    public ArrayList<Toy> getArray() {
+        return toysArray;
+    }
 
     @Override
     public String toString() {
